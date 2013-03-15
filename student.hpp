@@ -5,11 +5,12 @@
 
 class Student : public Person {
 public:
-  int getID();
-  float getGPA();
-  int getCreditsCompleted();
-  int getQualityPoints();
-  
+  //max
+  int getID() const;
+  float getGPA() const;
+  int getCreditsCompleted() const;
+  int getQualityPoints() const;
+  //shane
   void setID( int );
   void setGPA( float );
   void setCreditsCompleted( int );
