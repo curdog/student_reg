@@ -7,18 +7,18 @@
 class Person {
 public:
   Person();
-  char* getFirstName();
-  char* getLastName();
-  char* getAddress();
+  string getFirstName() const;
+  string getLastName() const;
+  string getAddress() const;
   
-  void setFirstName(char*);
-  void setLastName(char*);
-  void setAddress(char*);
+  void setFirstName(const string&);
+  void setLastName(const string&);
+  void setAddress(const string&);
   
 private:
-  char* firstName;
-  char* lastName;
-  char* address;
+  string firstName;
+  string lastName;
+  string address;
 };
 
 #endif
