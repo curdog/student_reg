@@ -1,13 +1,14 @@
 #include "student.hpp"
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 Student::Student(){
-  ID = 0;
+  ID  = 0;
   GPA = 0;
-  CC = 0;
-  QP = 0;
+  CC  = 0;
+  QP  = 0;
 }
 
 int Student::getID() const{
@@ -51,5 +52,5 @@ double Student::calcGPA(){
 
 void Student::display(){
 	
-	cout << fixed << setprecision(2) << setw(10) << ID << setw(32) << getFirstName() << ", " << getLastName() << setw(10) << "GPA: " << GPA << "\n";
+	cout << fixed << setprecision(2) << setw(10) << ID << setw(33) << getFirstName() << ", " << getLastName() << setw(10) << "GPA: " << GPA << "\n";
 }
