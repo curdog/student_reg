@@ -1,10 +1,14 @@
 #include "person.hpp"
 
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
 
 Person::Person(){
-  firstName = "";
-  lastName = "";
-  address = "";
+  firstName = "Tyler";
+  lastName = "Durden";
+  address = "420 Paper St";
 }
 
 string Person::getFirstName() const{
@@ -33,4 +37,8 @@ void Person::setLastName( const string& s ){
 void Person::setAddress( const string& s){
 
   address = s;
+}
+
+void Person::display(){
+	cout << firstName << ", " << lastName << setw(15) << address << "\n";
 }
