@@ -1,5 +1,5 @@
 #include "person.hpp"
-
+#include <string>
 #include <iostream>
 #include <iomanip>
 
@@ -24,21 +24,25 @@ string Person::getAddress() const{
 }
 
 void Person::setFirstName( const string& s ){
-  if( s.length() > 15 )
-    return;
-
-  firstName = s;
+  firstName = capLength(s, 15);
 }
 
 void Person::setLastName( const string& s ){
-  lastName = s;
+  lastName = capLength(s, 15);
 }
 
 void Person::setAddress( const string& s){
 
-  address = s;
+  address = capLength(s, 20);
 }
 
 void Person::display(){
 	cout << firstName << ", " << lastName << setw(15) << address << "\n";
+}
+
+string Person::capLength( const string& s, int len ) const{
+	if (s.length() > 16) {
+		cerr << "Warning: Capping string length\n";
+	}
+	return s.substr( 0, len );	
 }

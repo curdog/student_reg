@@ -45,11 +45,11 @@ double Student::calcGPA(){
 		return 0;
 	}
 	
-	return QP / CC;
+	return (float)QP / (float)CC;
 
 }
 
 void Student::display(){
-	//cout << setw(2);
-	cout << ID << " " << getFirstName() << ", " << getLastName() << getAddress() << "GPA: " << GPA << " Completed: " << CC << " QP: " << QP << "\n";
+	
+	cout << fixed << setprecision(2) << setw(10) << ID << setw(32) << getFirstName() << ", " << getLastName() << setw(10) << "GPA: " << GPA << "\n";
 }
