@@ -9,7 +9,19 @@ using namespace std;
 string capLength( string&, int );
 
 int main (int argc, char * const argv[]) {
-	
+
+num reply=0;
+while(true){
+cout <<"\nEdit/Search Database? \n";
+cout <<"1. Add";
+cout <<"2. Delete";
+cout <<"3. Search";
+
+cin >> reply;
+
+switch (reply){
+
+case 1: 
 	string fileName;
 	cout << "Enter a valid file path (relative or absolute): ";
 	cin >> fileName;
@@ -20,7 +32,14 @@ int main (int argc, char * const argv[]) {
 		cerr << "File Error!!! Failing hard and fast\n";
 		exit(EXIT_FAILURE);
 	}
-	
+    break;
+
+case 2: 
+
+cout << "Delete";
+    break;
+
+case 3: 
 	Student bueler;
 	string temp;
 	int tempi;
@@ -63,6 +82,14 @@ int main (int argc, char * const argv[]) {
 		bueler.display();
 		
 	}
+    break;
+
+default: 
+cout << "Not an Option";
+    break;
+	}	
+}	
+	
 	
 	
 	
